@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamDevTeam - Разработка Игр</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* --- 1. Общие стили и Сброс --- */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Светлый, чистый фон */
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Плавный скролл при навигации */
+        }
+        
+        /* --- 2. Хеадер (Sticky) --- */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 26px;
+            font-weight: 800; /* Очень жирный шрифт */
+            color: #2c3e50;
+        }
+        
+        /* Кнопка Телеграм */
+        .telegram-button {
+            background-color: #0077b5; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .telegram-button:hover {
+            background-color: #005a8f; 
+            transform: translateY(-2px);
+        }
+
+        /* --- 3. Контейнер и Секции --- */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        section {
+            padding: 60px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #3498db; 
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        
+        /* --- 4. Стили "Наши Игры" (Карточка) --- */
+        .games-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .game-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 200px; /* Фиксированная высота для изображения */
+            object-fit: cover;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .card-button {
+            display: inline-block;
+            background-color: #27ae60; /* Зеленый цвет для кнопки действия */
+            color: white;
+            padding: 10px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .card-button:hover {
+            background-color: #229954;
+        }
+
+        /* --- 5. Стили "Почему Мы" (Плитки) --- */
+        .reasons-grid {
+            display: flex;
+            gap: 20px;
+            text-align: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .reason-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            padding: 30px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+        }
+
+        .reason-item i {
+            font-size: 40px;
+            color: #f39c12; /* Оранжевый акцент */
+            margin-bottom: 15px;
+        }
+
+        .reason-item h4 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        /* --- 6. Футер --- */
+        .footer {
+            background-color: #34495e; /* Темный фон футера */
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-title">DreamDevTeam</div>
+        <a href="https://t.me/dream_devteam" target="_blank" class="telegram-button">
+            <i class="fab fa-telegram-plane"></i> Телеграм
+        </a>
+    </header>
+
+    <section id="about" class="container" style="text-align: center; padding-top: 100px; padding-bottom: 80px; border-bottom: none;">
+        <h1 style="font-size: 48px; color: #3498db; margin-bottom: 10px;">Мы — DreamDevTeam</h1>
+        <p style="font-size: 20px; color: #7f8c8d; max-width: 800px; margin: 0 auto;">
+            Небольшая команда увлеченных разработчиков, создающая захватывающие и уникальные инди-игры, полные магии и приключений. Наша цель — вдохновлять и развлекать игроков.
+        </p>
+        <img src="" alt="Команда DreamDevTeam" style="max-width: 90%; height: auto; margin-top: 40px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);">
+    </section>
+
+    <section id="games" class="container">
+        <h2>Наши Игры</h2>
+        <div class="games-grid">
+            
+            <div class="game-card">
+                <img src="https://via.placeholder.com/300x200?text=TreeDefender+Icon" alt="Иконка TreeDefender"> 
+                <div class="card-content">
+                    <h3>TreeDefender</h3>
+                    <p>Новогодний Tower Defense! Защитите Елку от волн злобных монстров, вооружившись снежками.</p>
+                    <a href="https://dreamdevteam.vercel.app/treedefender.html" target="_blank" class="card-button">
+                        <i class="fas fa-external-link-alt"></i> Перейти
+                    </a>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <img src="https://via.placeholder.com/300x200?text=Soon..." alt="Иконка Будущей Игры">
+                <div class="card-content">
+                    <h3>Проект «Тайга»</h3>
+                    <p>Survival-RPG в диких таежных лесах. Следите за новостями!</p>
+                    <a href="https://t.me/dream_devteam" target="_blank" class="card-button" style="background-color: #95a5a6;">
+                        Скоро!
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="why-us" class="container">
+        <h2>Почему выбирают нас?</h2>
+        <div class="reasons-grid">
+            
+            <div class="reason-item">
+                <i class="fas fa-heart"></i>
+                <h4>Страсть к играм</h4>
+                <p>Мы делаем то, что любим. Каждая деталь в наших проектах наполнена вниманием и любовью к игровому процессу.</p>
+            </div>
+            
+            <div class="reason-item">
+                <i class="fas fa-lightbulb"></i>
+                <h4>Свежие Идеи</h4>
+                <p>Мы не боимся экспериментировать с жанрами и механиками, чтобы предложить игрокам что-то по-настоящему новое.</p>
+            </div>
+            
+            <div class="reason-item">
+                <i class="fas fa-users"></i>
+                <h4>Открытость</h4>
+                <p>Мы всегда открыты к диалогу с сообществом и используем обратную связь для постоянного улучшения наших игр.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 DreamDevTeam. Все права защищены. | <a href="https://t.me/dream_devteam" target="_blank">Связаться с нами</a></p>
+    </footer>
+
+</body>
+</html>
+
