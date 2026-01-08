@@ -6,14 +6,15 @@
     <title>DreamDevTeam - Разработка Игр</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* --- 1. Общие стили и Сброс --- */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa; /* Светлый, чистый фон */
+            background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
-            scroll-behavior: smooth; /* Плавный скролл при навигации */
+            scroll-behavior: smooth;
         }
         
         /* --- 2. Хеадер (Sticky) --- */
@@ -31,11 +32,10 @@
 
         .header-title {
             font-size: 26px;
-            font-weight: 800; /* Очень жирный шрифт */
+            font-weight: 800;
             color: #2c3e50;
         }
         
-        /* Кнопка Телеграм */
         .telegram-button {
             background-color: #0077b5; 
             color: white;
@@ -53,6 +53,27 @@
             background-color: #005a8f; 
             transform: translateY(-2px);
         }
+
+        /* --- НОВОЕ: Уведомление о Телеграм --- */
+        .telegram-banner {
+            background-color: #f39c12; /* Яркий оранжевый/желтый */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 16px;
+            position: sticky; /* Добавляем sticky, чтобы оно прилипало под хедером */
+            top: 60px; /* Смещаем вниз на высоту хедера (примерно) */
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .telegram-banner a {
+            color: white;
+            text-decoration: underline;
+            margin-left: 5px;
+        }
+        /* ------------------------------------- */
 
         /* --- 3. Контейнер и Секции --- */
         .container {
@@ -100,7 +121,7 @@
 
         .game-card img {
             width: 100%;
-            height: 200px; /* Фиксированная высота для изображения */
+            height: 200px;
             object-fit: cover;
             border-bottom: 1px solid #e9ecef;
         }
@@ -117,7 +138,7 @@
 
         .card-button {
             display: inline-block;
-            background-color: #27ae60; /* Зеленый цвет для кнопки действия */
+            background-color: #27ae60;
             color: white;
             padding: 10px 25px;
             border-radius: 6px;
@@ -151,7 +172,7 @@
 
         .reason-item i {
             font-size: 40px;
-            color: #f39c12; /* Оранжевый акцент */
+            color: #f39c12;
             margin-bottom: 15px;
         }
 
@@ -162,7 +183,7 @@
 
         /* --- 6. Футер --- */
         .footer {
-            background-color: #34495e; /* Темный фон футера */
+            background-color: #34495e;
             color: #ecf0f1;
             text-align: center;
             padding: 20px 0;
@@ -185,12 +206,15 @@
         </a>
     </header>
 
+    <div class="telegram-banner">
+        Все наши игры можно скачать и обсудить в нашем <a href="https://t.me/dream_devteam" target="_blank">Телеграм-канале</a>!
+    </div>
+
     <section id="about" class="container" style="text-align: center; padding-top: 100px; padding-bottom: 80px; border-bottom: none;">
         <h1 style="font-size: 48px; color: #3498db; margin-bottom: 10px;">Мы — DreamDevTeam</h1>
         <p style="font-size: 20px; color: #7f8c8d; max-width: 800px; margin: 0 auto;">
-            Небольшая команда увлеченных разработчиков, создающая захватывающие и уникальные инди-игры, полные магии и приключений. Наша цель — вдохновлять и развлекать игроков.
-        </p>
-       
+            Мы (DreamDevTeam) — небольшая команда увлеченных разработчиков, создающая захватывающие и уникальные инди-игры, полные магии и приключений. Наша цель — вдохновлять и развлекать игроков.
+        </p>  
     </section>
 
     <section id="games" class="container">
@@ -198,7 +222,7 @@
         <div class="games-grid">
             
             <div class="game-card">
-                <img src="icons/icon.png" alt="Иконка TreeDefender"> 
+                <img src="icons/icon.png> 
                 <div class="card-content">
                     <h3>TreeDefender</h3>
                     <p>Новогодний Tower Defense! Защитите Елку от волн злобных монстров, вооружившись снежками.</p>
@@ -207,6 +231,8 @@
                     </a>
                 </div>
             </div>
+            
+
             </div>
 
         </div>
@@ -243,4 +269,3 @@
 
 </body>
 </html>
-
